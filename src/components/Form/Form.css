@@ -1,0 +1,177 @@
+
+#contact {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    background-image: linear-gradient(90.21deg, #66FFFF -5.91%, #4A2FBD 111.58%);
+}
+
+.contact-content h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--cor0);
+}
+
+
+form {
+    width: 400px;
+    color: var(--cor3);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+form input {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.334);
+    color: var(--cor3);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    padding: 20px 25px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+
+form textarea {
+    background-color: rgba(255, 255, 255, 0.334);
+    color: var(--cor3);
+    height: 150px;
+    padding: 15px;
+    outline: none;
+    border: 1px solid transparent;
+    resize: none;
+    font-size: 19px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.contact-ilustration-img {
+    height: 500px;
+}
+
+/* button goey*/
+
+.btn-form {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--cor0);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}
+
+.btn-form::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor3);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.btn-form:hover::before {
+    transform: translateX(0);
+}
+
+.btn-form a {
+    color: var(--cor3);
+}
+
+.btn-form:hover a {
+    color: var(--cor0);
+}
+
+/* TABLET REPONSIVE */
+
+@media screen and (max-width: 900px) {
+
+    #contact {
+        padding: 40px;
+        justify-content: center;
+        height: 80vh;
+        flex-direction: column;
+    }
+
+    .contact-content h2 {
+        font-size: 60px;
+        margin-bottom: 50px;
+    }
+
+    form {
+        width: 500px;
+        font-size: 22px;
+    }
+
+    form input {
+        height: 100px;
+    }
+
+    .contact-ilustration-img {
+        display: none;
+    }
+
+    .btn-form {
+        width: 170px;
+        height: 70px;
+    }
+}
+
+/* REPOSNIVE MOBILE */
+
+@media screen and (max-width: 450px) {
+    
+    #contact {
+        height: 100vh;
+        padding: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact-content h2 {
+        font-size:  42px;
+        margin-bottom: 60px;
+    }
+
+    form {
+        font-size: 16px;
+        width: 300px;
+    }
+
+    form input {
+        height: 80px;
+    }
+
+    form textarea {
+        height: 130px;
+        margin-bottom: 15px;
+    }
+
+    .contact-ilustration-img {
+        display: none;
+    }
+
+    .btn-form {
+        width: 130px;
+        height: 60px;
+    }
+}
